@@ -7,7 +7,7 @@ R_tokenizer = AutoTokenizer.from_pretrained('distilbert-base-uncased-finetuned-s
 input_name = ['input__0']
 output_name = 'output__0'
 #url='127.0.0.1:8000'
-def run_inference(premise, model_name='distilbert', url='54.151.34.15:8000', model_version='1'):
+def run_inference(premise, model_name='distilbert', url='54.84.220.218:8000', model_version='1'):
     triton_client = tritonhttpclient.InferenceServerClient(
         url=url, verbose=VERBOSE)
     model_metadata = triton_client.get_model_metadata(
